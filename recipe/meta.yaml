@@ -1,5 +1,5 @@
 {% set name = "ARIA-tools" %}
-{% set version = "1.1.5" %}
+{% set version = "1.1.6" %}
 
 
 package:
@@ -8,13 +8,13 @@ package:
 
 source:
   url: https://github.com/aria-tools/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c544fee1c539f38e23897d27332a6af0f45d48874e651a096993dbd311cbbf48
+  sha256: d92cd37d32ea6f4e26a5cbf6a007dcfde0bdd67d568ed9f8acba63f2142c954a
 
 build:
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   skip: true  # [py<38 or win]
   # entry_points: 
   #   - ariaExtract.py = tools/bin/ariaExtract.py:main
@@ -88,7 +88,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - sssangha 
+    - sssangha
     - cmarshak
     - jhkennedy
     - dbekaert
