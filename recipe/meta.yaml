@@ -30,7 +30,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - python >=3.8
+    - python
     - pip
     - pybind11 >=2.5.0
     - setuptools >61.0
@@ -45,7 +45,7 @@ requirements:
     - gdal >=3.4.1
     - h5py
     - joblib
-    - matplotlib
+    - matplotlib-base
     - netcdf4
     - pandas
     - xarray
@@ -54,7 +54,7 @@ requirements:
     - pip
     - pyproj
     - requests
-    - scipy>1.10.0
+    - scipy >1.10.0
     - shapely
     - dask
 
