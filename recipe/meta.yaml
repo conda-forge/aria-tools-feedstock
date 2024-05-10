@@ -14,7 +14,7 @@ build:
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [py<38 or win]
   # entry_points: 
   #   - ariaExtract.py = tools/bin/ariaExtract.py:main
@@ -41,7 +41,7 @@ requirements:
   run:
     - python
     - asf_search
-    - cartopy
+    - dem_stitcher >=2.5.0
     - gdal >=3.4.1
     - h5py
     - joblib
@@ -54,9 +54,9 @@ requirements:
     - pip
     - pyproj
     - requests
-    - scipy <1.10
-    - mintpy
+    - scipy >1.10.0
     - shapely
+    - dask
 
 test:
   imports:
