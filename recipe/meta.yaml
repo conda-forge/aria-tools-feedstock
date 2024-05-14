@@ -43,7 +43,7 @@ requirements:
     - asf_search
     - dask
     - dem_stitcher >=2.5.0
-    - gdal>=3.4.1
+    - gdal >=3.4.1
     - h5py
     - joblib
     - matplotlib
@@ -53,11 +53,11 @@ requirements:
     - pip
     - pyproj
     - pytest
-    - python>=3.8
+    - python >=3.8
     - rasterio
     - rioxarray
     - requests
-    - scipy>1.10.0
+    - scipy >1.10.0
     - shapely
     - tile_mate
     - xarray
