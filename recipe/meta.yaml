@@ -1,5 +1,5 @@
 {% set name = "ARIA-tools" %}
-{% set version = "1.1.6" %}
+{% set version = "1.1.7" %}
 
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://github.com/aria-tools/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: d92cd37d32ea6f4e26a5cbf6a007dcfde0bdd67d568ed9f8acba63f2142c954a
+  sha256: d4cede9b17a7603952a37a8bc0d1dd5a94787104f682ee4f0ff8e935bd14d02e
 
 build:
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - {{ PYTHON }} -m pip install . -vv
-  number: 2
-  skip: true  # [py<38 or win]
+  number: 0
+  skip: true  # [py<39 or win]
   # entry_points: 
   #   - ariaExtract.py = tools/bin/ariaExtract.py:main
   #   - ariaDownload.py = tools/bin/ariaDownload.py:main
@@ -40,8 +40,8 @@ requirements:
     - numpy
     - cython
   run:
-    - python
     - asf_search
+    - dask
     - dem_stitcher >=2.5.0
     - gdal >=3.4.1
     - h5py
@@ -49,15 +49,18 @@ requirements:
     - matplotlib-base
     - netcdf4
     - pandas
-    - xarray
-    - rasterio
-    - rioxarray
+    - parallel
     - pip
     - pyproj
+    - pytest
+    - python
+    - rasterio
+    - rioxarray
     - requests
     - scipy >1.10.0
     - shapely
-    - dask
+    - tile_mate
+    - xarray
 
 test:
   imports:
