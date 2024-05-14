@@ -16,6 +16,7 @@ build:
     - {{ PYTHON }} -m pip install . -vv
   number: 0
   skip: true  # [py<38 or win]
+    - python <=3.8
   # entry_points: 
   #   - ariaExtract.py = tools/bin/ariaExtract.py:main
   #   - ariaDownload.py = tools/bin/ariaDownload.py:main
