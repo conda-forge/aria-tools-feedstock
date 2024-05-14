@@ -31,7 +31,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - python
+    - python >=3.8
     - pip
     - pybind11 >=2.5.0
     - setuptools >61.0
@@ -40,24 +40,27 @@ requirements:
     - numpy
     - cython
   run:
-    - python
     - asf_search
+    - dask
     - dem_stitcher >=2.5.0
-    - gdal >=3.4.1
+    - gdal>=3.4.1
     - h5py
     - joblib
-    - matplotlib-base
+    - matplotlib
     - netcdf4
     - pandas
-    - xarray
-    - rasterio
-    - rioxarray
+    - parallel
     - pip
     - pyproj
+    - pytest
+    - python>=3.8
+    - rasterio
+    - rioxarray
     - requests
-    - scipy >1.10.0
+    - scipy>1.10.0
     - shapely
-    - dask
+    - tile_mate
+    - xarray
 
 test:
   imports:
