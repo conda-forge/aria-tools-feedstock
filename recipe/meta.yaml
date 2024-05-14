@@ -65,6 +65,7 @@ requirements:
 test:
   imports:
     - ARIAtools
+    - ARIAtools.util
   requires:
     - pip
   commands:
