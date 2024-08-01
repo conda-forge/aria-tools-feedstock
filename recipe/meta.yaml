@@ -31,19 +31,22 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - python
+    - python >=3.8
     - pip
     - pybind11 >=2.5.0
     - setuptools >61.0
     - setuptools_scm >6.2
     - python-build
+    - python-dateutil
     - numpy
     - cython
   run:
+    - affine
+    - arm_pyart
     - asf_search
     - dask
-    - dem_stitcher >=2.5.0
-    - gdal >=3.4.1
+    - dem_stitcher >=2.5.8
+    - gdal >=3.7.0
     - h5py
     - joblib
     - matplotlib-base
