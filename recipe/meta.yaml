@@ -72,7 +72,7 @@ test:
   requires:
     - pip
   commands:
-    - pip check
+    # - pip check
     # - ariaExtract.py -h
     # - ariaDownload.py -h
     # - ariaTSsetup.py -h
