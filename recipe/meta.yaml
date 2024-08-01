@@ -31,7 +31,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - python >=3.8
+    - python
     - pip
     - pybind11 >=2.5.0
     - setuptools >61.0
