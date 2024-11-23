@@ -14,7 +14,7 @@ build:
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [py<39 or win]
   # entry_points: 
   #   - ariaExtract.py = tools/bin/ariaExtract.py:main
