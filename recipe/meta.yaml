@@ -14,7 +14,7 @@ build:
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [py<39 or win]
   # entry_points: 
   #   - ariaExtract.py = tools/bin/ariaExtract.py:main
@@ -49,6 +49,8 @@ requirements:
     - gdal >=3.7.0
     - h5py
     - joblib
+    - libgdal-hdf5
+    - libgdal-netcdf
     - matplotlib-base
     - netcdf4
     - pandas
@@ -62,7 +64,7 @@ requirements:
     - requests
     - scipy >1.10.0
     - shapely
-    - tile_mate
+    - tile_mate >=0.0.12
     - xarray
 
 test:
