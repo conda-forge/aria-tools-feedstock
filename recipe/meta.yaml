@@ -48,7 +48,7 @@ requirements:
   run:
     - affine
     - arm_pyart
-    - asf_search
+    - asf_search >=10.0.4
     - dask
     - dem_stitcher >=2.5.8
     - gdal >=3.7.0
@@ -103,8 +103,8 @@ about:
 
 extra:
   recipe-maintainers:
-    - ehavazli
     - sssangha
+    - ehavazli
     - cmarshak
     - jhkennedy
     - dbekaert
