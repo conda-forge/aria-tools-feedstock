@@ -1,5 +1,5 @@
 {% set name = "ARIA-tools" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/aria-tools/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 05fe35f2aa03a65790e12cce14a9e4bb7849baca922b18b815a7dbf0c63b08c4
+  sha256: c26e48a59479df08c396f5c2e4644d3dd480830008c3bb7c97e502c47e713828
 
 build:
   script:
