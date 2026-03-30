@@ -1,14 +1,14 @@
 {% set name = "ARIA-tools" %}
-{% set version = "1.4.3" %}
+{% set version = "1.5" %}
 
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/aria-tools/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c26e48a59479df08c396f5c2e4644d3dd480830008c3bb7c97e502c47e713828
+  sha256: c78de9727c73e551530be34705a3c4b57077a2ccc1a872454a116573f1b86fe6
 
 build:
   script:
@@ -23,6 +23,7 @@ build:
   #   - ariaPlot = tools/bin/ariaPlot.py:main
   #   - ariaMisclosure.py = tools/bin/ariaMisclosure.py:main
   #   - ariaAOIassist.py = tools/bin/ariaAOIassist.py:main
+  #   - ariaOrderASF.py = tools/bin/ariaOrderASF.py:main
 
 requirements:
   build:
@@ -48,7 +49,8 @@ requirements:
   run:
     - affine
     - arm_pyart
-    - asf_search >=12.0.1
+    - asf_enumeration >=0.4.0
+    - asf_search >=12.0.3
     - dask
     - dem_stitcher >=2.5.8
     - gdal >=3.7.0
@@ -71,6 +73,7 @@ requirements:
     - shapely
     - tile_mate >=0.0.12
     - xarray
+    - hyp3_sdk >=7.7.6
 
 test:
   imports:
@@ -86,6 +89,7 @@ test:
     # - ariaPlot -h
     # - ariaMisclosure.py -h
     # - ariaAOIassist.py -h
+    # - ariaOrderASF.py -h
 
 about:
   home: https://github.com/aria-tools/ARIA-tools
