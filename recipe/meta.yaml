@@ -49,7 +49,7 @@ requirements:
   run:
     - affine
     - arm_pyart
-    #- asf-enumeration >=0.4.0
+    - asf-enumeration >=0.4.0
     - asf_search >=12.0.3
     - dask
     - dem_stitcher >=2.5.8
